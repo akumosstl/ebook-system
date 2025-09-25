@@ -1,0 +1,50 @@
+@if (viewMode){
+@if (currentBook.id){
+<h4>Book</h4>
+<div>
+  <label><strong>Title:</strong></label> {{ currentBook.title }}
+</div>
+<div>
+  <label><strong>Author:</strong></label>
+  {{ currentBook.author }}
+</div>
+<div>
+  <label><strong>Genre:</strong></label>
+  {{ currentBook.genre }}
+</div>
+
+<a class="badge badge-warning" routerLink="/books/{{ currentBook.id }}">
+  Edit
+</a>
+} @else {<p>Please click on a Book...</p>}
+} @else {
+@if (currentBook.id) {
+<div class="edit-form">
+  <h4>Book</h4>
+  <form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="currentBook.title" name="title" />
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" class="form-control" id="author" [(ngModel)]="currentBook.author" name="author" />
+    </div>
+    <div class="form-group">
+      <label for="author">Genre</label>
+      <input type="text" class="form-control" id="genre" [(ngModel)]="currentBook.genre" name="genre" />
+    </div>
+
+  </form>
+
+  <button class="badge badge-danger mr-2" (click)="deleteBook()">
+    Delete
+  </button>
+
+  <button type="submit" class="badge badge-success mb-2" (click)="updateBook()">
+    Update
+  </button>
+  <p>{{ message }}</p>
+</div>
+} @else {<p>Cannot access this Book...</p>}
+}
