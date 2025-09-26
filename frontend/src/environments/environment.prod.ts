@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://springbookapi:9090/api/books',
-  authUrl: 'http://springbookapi:9090/auth'
+  apiUrl: 'http://localhost:9090/api/books',
+  authUrl: 'http://localhost:9090/auth'
 };

@@ -11,6 +11,8 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - mysql_data:/var/lib/mysql
+    networks:
+      - ebook
 
   springbookapi:
     build: .
@@ -24,6 +26,8 @@ services:
       SPRING_DATASOURCE_PASSWORD: password
     ports:
       - "9090:9090"
+    networks:
+      - ebook
 
   frontend:
     build: ../frontend
@@ -31,6 +35,12 @@ services:
     ports:
       - "3000:80"
     restart: unless-stopped
+    networks:
+      - ebook
 
 volumes:
   mysql_data:
+
+networks:
+  ebook:
+    driver: bridge

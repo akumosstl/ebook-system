@@ -24,8 +24,7 @@ localhost:4200
 First of all, you need run the following command:
 
 ```
-npm run build
-
+ng build 
 ```
 
 Then run:
