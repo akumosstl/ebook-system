@@ -19,6 +19,15 @@ localhost:4200
 
 ```
 
+To login use:
+
+```
+user: admin
+
+password: password
+
+```
+
 ## Docker
 
 First of all, you need run the following command:
