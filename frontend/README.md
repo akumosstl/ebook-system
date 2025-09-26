@@ -31,7 +31,7 @@ npm run build
 Then run:
 
 ```
-docker build .
+docker build -t frontend:angular .
 
 ```
 

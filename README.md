@@ -1,3 +1,11 @@
+# Challenge 
+
+The perfect world couldn´t be implemented in this repo. 
+To see how this repo could be in the future, using cloud patterns, swagger and real security check my others repositories, like this:
+
+https://github.com/akumosstl/wallet-microservices
+
+
 # Backend
 
 Spring Book API

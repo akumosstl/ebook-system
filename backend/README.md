@@ -24,3 +24,10 @@ Notes:
 The docker-compose file has all you need to run, including forntend app.
 
 - docker-compose up
+
+
+Then access:
+
+```
+http://localhost:3000
+```

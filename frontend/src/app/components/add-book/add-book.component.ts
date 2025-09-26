@@ -31,7 +31,7 @@ export class AddBookComponent {
       },
       error: (e) => {
         console.error(e)
-        alert(e)
+        alert(`Error \n The title should be unique! \n\n\n ${JSON.stringify(e)}`)
       }
     });
   }
