@@ -82,3 +82,10 @@ docker build .
 Then to up application and running using docker please run the docker-compose.yml file at backend project.
 
 There you will see the forntend application as a docker-compose service.
+
+To access through docker try:
+
+```
+localhost:3000
+
+```

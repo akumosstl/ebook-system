@@ -31,7 +31,7 @@ public class SecurityConfig {
                 .and();
 
         http.authorizeRequests()
-                .antMatchers("/auth/**").permitAll()
+                .antMatchers("/auth/login").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/books/**").permitAll()
                 .anyRequest().authenticated();
 

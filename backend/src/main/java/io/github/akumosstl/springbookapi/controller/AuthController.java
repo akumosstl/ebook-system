@@ -1,6 +1,8 @@
 package io.github.akumosstl.springbookapi.controller;
 
 import io.github.akumosstl.springbookapi.security.JwtUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,6 +16,8 @@ import java.util.Map;
 @CrossOrigin(origins = "*")
 public class AuthController {
 
+    private final Logger logger = LoggerFactory.getLogger(AuthController.class);
+
     private final AuthenticationManager authManager;
     private final JwtUtil jwtUtil;
 
@@ -26,9 +30,11 @@ public class AuthController {
     public ResponseEntity<?> login(@RequestBody Login body) {
         String username = body.getUser();
         String password = body.getPassword();
+        logger.info("[ AuthController ] trying log using: {} and {}", username, password);
         try {
             authManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
             String token = jwtUtil.generateToken(username);
+            logger.info("[ AuthController ] token generated: {}", token);
             return ResponseEntity.ok(Map.of("token", token));
         } catch (Exception ex) {
             return ResponseEntity.status(401).body(Map.of("error", "Invalid credentials"));

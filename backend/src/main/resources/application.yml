@@ -6,14 +6,14 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/pp0alm?serverTimezone=GMT-5&allowMultiQueries=true
     username: root
-    password: password  # my password
+    password: password
   jpa:
     hibernate:
-      ddl-auto: create # Or create, create-drop, validate
-    show-sql: true # Optional: to see the generated SQL in the console
+      ddl-auto: create
+    show-sql: true
     properties:
       hibernate:
-        format_sql: true # Optional: to format the generated SQL
+        format_sql: true
   sql:
     init:
       mode: always

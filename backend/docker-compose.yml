@@ -24,6 +24,7 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/pp0alm?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: password
+      TZ: America/Sao_Paulo
     ports:
       - "9090:9090"
     networks:
@@ -35,6 +36,8 @@ services:
     ports:
       - "3000:80"
     restart: unless-stopped
+    environment:
+      TZ: America/Sao_Paulo
     networks:
       - ebook
 
