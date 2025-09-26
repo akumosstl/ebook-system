@@ -89,3 +89,12 @@ To access through docker try:
 localhost:3000
 
 ```
+
+To login use:
+
+```
+user: admin
+
+password: password
+
+```

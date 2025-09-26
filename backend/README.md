@@ -33,3 +33,11 @@ Then access:
 localhost:3000
 
 ```
+To login use:
+
+```
+user: admin
+
+password: password
+
+```
