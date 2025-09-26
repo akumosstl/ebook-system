@@ -38,3 +38,10 @@ docker build -t frontend:angular .
 Then to up application and running using docker please run the docker-compose.yml file at backend project.
 
 There you will see the forntend application as a docker-compose service.
+
+After up the docker-compose file access:
+
+```
+localhost:3000
+
+```
